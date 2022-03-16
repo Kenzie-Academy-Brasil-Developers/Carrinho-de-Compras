@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 1603px;
+    background-image: linear-gradient(to left bottom, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
+  }
+
+
+
+header {
+    background-color:#eeeeee;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    margin-right: 0;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+
+.logotipo {
+    width: 130px;
+    height: 43px;
+    margin-left: 135px;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    width: 300px;
+    color: #828282;
+    text-decoration: none;
+    width: 200px;
+    height: 16px;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.filters{
+    align-items: center;
+    float: right;
+    font-family:'Inter', sans-serif;
+    font-size: 16px;
+    width: 400px;
+    padding: 5px 10px;
+    margin-right: -30px;
+    
+}
+
+nav{
+    float: right;
+    width: 1200px;
+}
+
+
+input {
+    width: 240px;
+    height: 48px;
+    float: right;
+    display: flex;
+    margin-right: 8px;
+    margin-top: 5px;
+    background-color: rgb(238, 236, 236);
+    border-radius: 10px 5px;
+    border: none;
+    box-shadow: 2px 3px 5px 3px rgb(214, 213, 213);
+}
+
+.forinput{
+    width: 96px;
+    height: 50px;
+    float: right;
+    margin-right: 115px;
+    max-width: 96px;
+    margin-top: 5px;
+    background-color: #142e05;
+    border-radius: 10px 5px;
+    color: white;
+    border: none;
+}
+
+.search-area{
+    display: inline-flex;
+    float: right;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.container{
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 980px;
+    margin-left: 115px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.produto{
+    width: 282px;
+    height: 380px;
+    border: 1px solid #ebebeb;
+    margin: 40px 20px;
+    margin-top: 0px;
+    background-color: white;
+    box-shadow: 2px 3px 5px 3px rgb(230, 230, 230);
+}
+
+.titulocarr{
+    width: 349px;
+    height: 50px;
+    color: #F5F5F5;
+    background-color: #142e05;
+    border-radius: 10px 5px;
+    margin-right: 115px;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    float: right;
+    font-family:'Inter', sans-serif;
+    font-size: 14px;
+}
+
+#carrinho{
+    width: 349px;
+    height: 344px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    margin-right: 115px;
+    margin-top: 0px;
+    background-color: rgb(238, 236, 236);
+    text-align: center;
+    box-shadow: 2px 3px 2px 2px rgb(230, 230, 230);
+}
+
+.titlecarr{
+    font-size: 24px;
+    font-family:'Inter', sans-serif;
+    margin-top: 83px;
+    font-weight: 700;
+}
+
+.h3carrinho{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #828282;
+    font-weight: 400;
+}
+
+.titleandcarr{
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -790px;
+    margin-right: 40px;
+}
+
+.secgeral{
+    width: 917px;
+}
+
+.categoria{
+    width: 72px;
+    height: 26px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: #142e05;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 20px;
+    border-radius: 10px 5px;
+}
+
+.h2produto {
+    width: 176px;
+    height: 24px;
+    font-family: 'Inter', sans-serif;
+    color: #303330;
+    font-style: normal;
+    font-weight: 700, Bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.imgproduto{
+    width: 282px;
+    height: 144px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h3descproduto{
+    width: 269px;
+    height: 33px;
+    font-family: 'Inter', sans-serif;
+    color: #828282;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.precoprodutos{
+    width: 269px;
+    height: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700, Bold;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #0b1f00;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.botaoadccarrinho{
+    width: 147px;
+    height: 16px;
+    margin-left: 5px;
+    margin-top: 10px;
+    border: none;
+    background-color: white;
+    color: #828282;
+    text-decoration: underline;
+}

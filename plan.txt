@@ -1,0 +1,124 @@
+O que o usuário faz =>
+. Acessa a Página Inicial:
+  . Visualiza a Logomarca;
+  . Visualiza os filtros e barra de pesquisa;
+  . Visualiza todos os produtos;
+  . Visualiza o carrinho de compras;
+  
+. Interage com os produtos:
+  . Zoom ao passar o mouse por cima + Hover;
+  . Pesquisa de Produtos:
+    . Pesquisa de produtos pelo filtro;
+      . Pesquisa pela barra de pesquisas;
+    . Adiciona produto no carrinho de compras
+    . Visualiza o valor total da compra e o total de 
+produtos adicionados;  
+    . Remove produtos do carrinho de compras;
+
+Cores, fontes e tamanhos =>
+. Container principal baseado em 12 colunas com 
+tamanho de 1036px (width) por 543px (heigth);
+
+. Com a cor de fundo #FFFFFF com gradiente (cor a definir), 
+cor primária #2E245E, secundária #6B54DE.
+
+. Cabeçalho: 1603x70px - Cor: #F5F5F5
+
+. Filtros: à direita, 20px entre si, tamanho de cada filtro 71x16px,
+com a cor #828282;
+  . Interação: item selecionado com a cor #333333;
+
+. Input de pesquisa: 246x50px, cor #F5F5F5, "Digite sua pesquisa aqui":
+com 163x16px e cor #828282;
+  . Botão de pesquisa: 96x50px, color #6B54DE, "Pesquisar": na cor 
+#FFFFFF e tamanho de 76 por 16 px; 
+
+. Carrinho de compras: 
+ . Parte "Carrinho de Compras": na cor #6B54DE, com o tamanho
+ 347x50 e o texto 185x24 na cor white.
+
+ . Parte que recebe os produtos: 347x344px, color#F5F5F5
+  . Quando vazio "Carrinho Vazio" ao centro na cor #333333 com o tamanho
+  157x24px. E um "Adicione Itens" na cor #828282 com tamanho de 98x16px.
+
+. Cor de textos e backgrounds, primária #333333, secundária #828282,
+terciária #F5F5F5;
+
+. Colunas com 49px (width) e altura completa,
+21px (width) entre uma e outra;
+
+. Fonte títulos: Bold - cor primária para textos.
+  . Parágrafos e demais textos: Regular - cores segundárias
+  e terciárias para textos;
+
+. Tamanhos textos e títulos: Title 1 - 26px / Title 2 - 22px / Title 3 - 18px / 
+Parágrafos e demais textos: 16px, 14px e 12px respectivamente;
+
+. Box dos produtos com 300px (width) por 380px (heigth);
+
+. Box da img com 296px por 154px, backgroundcolor #F5F5F5.
+
+. IMG com 191.81px por 140px;
+
+. Box do texto com 296px (width) por 215px (heigth);
+
+. Tipo de produto: cor secundária do container, com 72px(width)
+por 26px (heigth);
+
+. Nome do produto: 176px(width) por 24px(heigth), cor primária
+para títulos;
+
+. Descrição do produto: 269px(width) por 33px (heigth), cor secundária 
+para textos;
+
+. Preço do produto: 269px por 16px(heigth), cor fonte primária container;
+
+. Botão de adcionar ao carrinho: 147px (width) por 16px (heigth);
+    . Hover na cor secundária do container.
+
+Algoritmo =>    
+1- Após a montagem e estilização, iniciar a função que vai tratar do Hover e interação ao produto.
+2- Iniciar uma função que aplique os filtros e uma que aplique a barra de pesquisa.
+3- Inicializar uma função que irá adcionar os produtos ao carrinho.
+4- Inicializar uma função Carrinho, que conta quantos produtos e soma o total do seu valor.
+5- Inicializar uma função que remove produtos do carrinho.
+
+
+ESTRUTURA =>
+
+Body
+  Header
+     H1
+     H2
+     H2
+     H2
+     H2
+Main
+ section
+   div
+      div
+        div
+          IMG
+        div  
+        section marca
+        H2 nome
+        H3 descr
+        H3 preço
+        button
+      div
+      div
+      div
+      div
+      div
+
+ Input 
+    button
+
+ div
+   div
+     H2
+   div
+     H2
+     h3
+              
+           
