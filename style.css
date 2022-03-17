@@ -1,9 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 1603px;
+    margin: 0%;
+    padding: 0%;
     background-image: linear-gradient(to left bottom, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
   }
 
@@ -46,7 +45,7 @@ li {
     font-size: 16px;
     width: 400px;
     padding: 5px 10px;
-    margin-right: -17px;
+    margin-right: -35px;
     
 }
 
@@ -96,7 +95,6 @@ input {
     display: inline-flex;
     float: right;
     align-items: center;
-    margin-right: 40px;
 }
 
 .container{
@@ -170,11 +168,13 @@ input {
     justify-content: center;
     flex-direction: column;
     margin-top: -790px;
-    margin-right: 40px;
+    margin-right: 115px;
 }
 
 .secgeral{
-    width: 917px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .categoria{
@@ -260,3 +260,4 @@ input {
 .botaoadccarrinho:hover{
     color: #071400;
 }
+
