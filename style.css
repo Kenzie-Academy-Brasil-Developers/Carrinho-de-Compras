@@ -6,8 +6,6 @@ html, body {
     background-image: linear-gradient(to left bottom, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
   }
 
-
-
 header {
     background-color:#eeeeee;
     width: 100%;
@@ -17,7 +15,6 @@ header {
     align-items: center;
     margin-bottom: 18px;
 }
-
 
 .logotipo {
     width: 140px;
@@ -161,17 +158,7 @@ input {
     font-weight: 400;
 }
 
-.titleandcarr{
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: -790px;
-    margin-right: 115px;
-}
-
-.secgeral{
+#secgeral{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -259,5 +246,11 @@ input {
 
 .botaoadccarrinho:hover{
     color: #071400;
+}
+
+
+.produtoNoCarrinho{
+    width: 100px;
+    height: 50px;
 }
 
