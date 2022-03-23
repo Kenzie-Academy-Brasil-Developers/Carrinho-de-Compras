@@ -13,7 +13,7 @@ function createProduct (){
    <section class="categoria">Dunk</section>
    <h2 class="h2produto">Dunk Low Sb Wb</h2>
    <h3 class="h3descproduto">Novo Nike Dunk Low SB red and white, garante à você uma pegada esportiva e streetwear.</h3>
-   <h3 class="precoprodutos">R$ 899,90</h3>
+   <h3 class="precoprodutos">R$ 899,99</h3>
    <button class="botaoadccarrinho" id="botaoProdutoUm">Adcionar ao carrinho</button>
 </article>
 </div>`;
@@ -55,7 +55,7 @@ function createProductTres (){
      <section class="categoria">Jordan</section>
      <h2 class="h2produto">Jordan 1 Mid Lakers</h2>
      <h3 class="h3descproduto">Novo Air Jordan 1 Mid x Lakers, para os amantes do basquete e streetwear.</h3>
-     <h3 class="precoprodutos">R$ 1.599,99</h3>
+     <h3 class="precoprodutos">R$ 899,99</h3>
      <button class="botaoadccarrinho" id="botaoProdutoTres">Adcionar ao carrinho</button>
   </article>
  </div>`;
@@ -96,7 +96,7 @@ function createProductCinco (){
      <section class="categoria">Jordan</section>
      <h2 class="h2produto">Jordan 1 Mid Wc</h2>
      <h3 class="h3descproduto">Novo Air Jordan 1 Mid white and grey, para fechar seu estilo off-white com muito conforto.</h3>
-     <h3 class="precoprodutos">R$ 1.299,99</h3>
+     <h3 class="precoprodutos">R$ 899,99</h3>
      <button class="botaoadccarrinho" id="botaoProdutoCinco">Adcionar ao carrinho</button>
   </article>
  </div>`;
@@ -132,7 +132,7 @@ const banco = [
     altImg: "Tênis Nike Dunk Low SB WR",
     titleImg:"Tênis Nike Dunk Low SB WR",
     tituloProduto: "Dunk Low Sb Wb",
-    precoProduto: 899.90,
+    precoProduto: 899.99,
     secao: "Dunk",
   },
   {
@@ -194,32 +194,61 @@ function captureClick (){
 captureClick();
 
 
-
 function createProductCart (produtoClicado){
   const pegarCart = document.getElementById("carrinho");
+
   const criarProduto = document.createElement ("div");
+
   criarProduto.classList = "produtoNoCarrinho";
   criarProduto.id = "0";
-  criarProduto.innerHTML =`<div  class="imgcarrinho">
-  <img src= ${produtoClicado.srcImg} class="imgCarrinhoDentro" 
-</div>
-<article>
- <h2 class="h2produto">${produtoClicado.tituloProduto}</h2>
- <h3 class="precoprodutos">${`R$ ` + produtoClicado.precoProduto}</h3>
- <button class="botaoremovecart" id="botaoRemove1">Remover item</button>
-</article>`;
-pegarCart.appendChild(criarProduto);
+  criarProduto.innerHTML =`
+  <img src="${produtoClicado.srcImg}" class="imgDentroCart">
+<div class="colunaCarrinho">
+ <h2 class="h2produtoCart">${produtoClicado.tituloProduto}</h2>
+
+ <h3 class="precoprodutosCart">${`R$ ` + produtoClicado.precoProduto}</h3>
+ </div>`;
+
+const getDivTextoProdutoCart = document.getElementsByClassName("colunaCarrinho");
+
+ botaoremove = document.createElement ("button")
+ botaoremove.classList.add("botaoremovecart")
+ botaoremove.id = "botaoRemove1";
+ botaoremove.innerText ="Remover Item";
+ botaoremove.addEventListener('click', (evt)=> {removeToCart(evt)});
+
+ criarProduto.appendChild(botaoremove)
+
+ pegarCart.appendChild(criarProduto);
+
+ if(pegarCart.children.length > 1){
+   pegarCart.children[0].classList.add("conteudoCarrinhoVazio");
+ } 
 }
+
 
 
 function addToCart (id){
   let produtoClicado = {};
   for (let i = 0; i < banco.length; i++){
     if(banco[i].id === id){
-      produtoClicado = banco[i]
+      produtoClicado = banco[i];
     }
   }
-  totalCarrinho += produtoClicado.precoProduto;
+  //totalCarrinho += produtoClicado.precoProduto;
 
   createProductCart(produtoClicado);
+}
+
+
+function removeToCart(evt){
+  let button = evt.target;
+  let product = button.parentElement;
+  product.remove()
+
+  const pegarCart = document.getElementById("carrinho");
+
+  if(pegarCart.children.length == 1){
+    pegarCart.children[0].classList.remove("conteudoCarrinhoVazio");
+ }
 }

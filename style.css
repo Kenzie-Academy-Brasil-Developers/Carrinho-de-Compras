@@ -142,6 +142,7 @@ input {
     background-color: rgb(238, 236, 236);
     text-align: center;
     box-shadow: 2px 3px 2px 2px rgb(230, 230, 230);
+    flex-wrap: wrap;
 }
 
 .titlecarr{
@@ -249,8 +250,61 @@ input {
 }
 
 
-.produtoNoCarrinho{
-    width: 100px;
-    height: 50px;
+.conteudoCarrinhoVazio{
+    display: none;
 }
 
+.produtoNoCarrinho{
+    width: 349px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgDentroCart{
+    width:100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.h2produtoCart{
+    width: 176px;
+    height: 10px;
+    font-family: 'Inter', sans-serif;
+    color: #474747;
+    font-style: normal;
+    font-weight: 700, Bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 25px 0px 5px ;
+    width: 176px;
+}
+
+.precoprodutosCart{
+    height: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700, Bold;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: #0b1f00;
+    margin: 12px 0px 0px 15px;
+}
+
+.colunaCarrinho{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.botaoremovecart{
+    width: 90px;
+    height: 16px;
+    margin-left: 4px;
+    margin-top: 10px;
+    border: none;
+    color: #828282;
+    text-decoration: underline;
+}
