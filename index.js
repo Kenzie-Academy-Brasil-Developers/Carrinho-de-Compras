@@ -1,5 +1,6 @@
 const vitrine =  document.querySelector(".container");
 let totalCarrinho = 0;
+let itensCarrinho = 0;
 
 function createProduct (){
     const criarProduto = document.createElement ("div");
@@ -198,9 +199,11 @@ function createProductCart (produtoClicado){
   const pegarCart = document.getElementById("carrinho");
 
   const criarProduto = document.createElement ("div");
+  const calculadoraPegar = document.getElementsByClassName("calculadoraCarr");
+  
 
   criarProduto.classList = "produtoNoCarrinho";
-  criarProduto.id = "0";
+  criarProduto.id = produtoClicado.id;
   criarProduto.innerHTML =`
   <img src="${produtoClicado.srcImg}" class="imgDentroCart">
 <div class="colunaCarrinho">
@@ -208,8 +211,6 @@ function createProductCart (produtoClicado){
 
  <h3 class="precoprodutosCart">${`R$ ` + produtoClicado.precoProduto}</h3>
  </div>`;
-
-const getDivTextoProdutoCart = document.getElementsByClassName("colunaCarrinho");
 
  botaoremove = document.createElement ("button")
  botaoremove.classList.add("botaoremovecart")
@@ -220,9 +221,11 @@ const getDivTextoProdutoCart = document.getElementsByClassName("colunaCarrinho")
  criarProduto.appendChild(botaoremove)
 
  pegarCart.appendChild(criarProduto);
+ 
 
  if(pegarCart.children.length > 1){
    pegarCart.children[0].classList.add("conteudoCarrinhoVazio");
+   calculadoraPegar[0].id="";
  } 
 }
 
@@ -235,7 +238,15 @@ function addToCart (id){
       produtoClicado = banco[i];
     }
   }
-  //totalCarrinho += produtoClicado.precoProduto;
+
+  itensCarrinho += 1;
+  totalCarrinho += produtoClicado.precoProduto;
+  
+  let quantidadeTotal = document.querySelector(".quantidadeTotal")
+  quantidadeTotal.innerText = itensCarrinho;
+  
+  let valorTotalProdutos = document.querySelector(".valorTotalProdutos");
+  valorTotalProdutos.innerText = totalCarrinho;
 
   createProductCart(produtoClicado);
 }
@@ -244,11 +255,44 @@ function addToCart (id){
 function removeToCart(evt){
   let button = evt.target;
   let product = button.parentElement;
+  let idDoProdutoRemovido = product.id;
+  console.log(idDoProdutoRemovido);
   product.remove()
-
+  const calculadoraPegar = document.getElementsByClassName("calculadoraCarr");
   const pegarCart = document.getElementById("carrinho");
 
   if(pegarCart.children.length == 1){
     pegarCart.children[0].classList.remove("conteudoCarrinhoVazio");
- }
+    calculadoraPegar[0].id = "esconder";
+
+ } 
+
+ let qtdItensPosRemover = document.querySelector (".quantidadeTotal");
+ qtdItensPosRemover.innerHTML = itensCarrinho -= 1;
+
+ let valorTotalRemoveCart = document.querySelector(".valorTotalProdutos");
+ valorTotalRemoveCart.innerHTML = totalCarrinho -= banco[idDoProdutoRemovido].precoProduto;
 }
+
+/*function createCalculadora (){
+  const captureAside = document.getElementsByClassName("lateral");
+
+  const criaCalcula = document.createElement ("div");
+  criaCalcula.classList = "calculadoraCarr"
+  criaCalcula.id = "calculadoraDisplay"
+
+  criaCalcula.innerHTML = `
+  <div class="quantidadeDeElementos">
+    <h2>Quantidade: </h2>
+    <h3>${itensCarrinho}</h3>
+  </div>
+    <div class="somaValorElementos">
+      <h2>Total: </h2>
+      <h3>${`R$` + totalCarrinho}</h3>
+    </div>`;
+
+captureAside.appendChild(criaCalcula);
+ 
+}
+createCalculadora();*/
+

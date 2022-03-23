@@ -116,11 +116,11 @@ input {
 }
 
 .titulocarr{
-    width: 349px;
+    width: 353px;
     height: 50px;
     color: #F5F5F5;
     background-color: #142e05;
-    border-radius: 10px 5px;
+    border-radius: 5px;
     margin-right: 115px;
     margin-top: 10px;
     align-items: center;
@@ -133,7 +133,7 @@ input {
 
 #carrinho{
     width: 349px;
-    height: 344px;
+    height: auto;
     float: right;
     display: flex;
     justify-content: center;
@@ -148,7 +148,7 @@ input {
 .titlecarr{
     font-size: 24px;
     font-family:'Inter', sans-serif;
-    margin-top: 83px;
+    margin-top: 111px;
     font-weight: 700;
 }
 
@@ -157,6 +157,7 @@ input {
     font-size: 12px;
     color: #828282;
     font-weight: 400;
+    margin-bottom: 176px;
 }
 
 #secgeral{
@@ -249,7 +250,6 @@ input {
     color: #071400;
 }
 
-
 .conteudoCarrinhoVazio{
     display: none;
 }
@@ -296,15 +296,65 @@ input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .botaoremovecart{
     width: 90px;
     height: 16px;
     margin-left: 4px;
-    margin-top: 10px;
+    margin-top: 28px;
     border: none;
     color: #828282;
     text-decoration: underline;
 }
+
+.lateral{
+    display: flex;
+    flex-direction: column;
+}
+
+.calculadoraCarr{
+    width: 352px;
+    height: 126px;
+    background-color: #101d09;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.quantidadeDeElementos{
+    width: 305px;
+    height: 12px;
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+    margin-left: 19px;
+    margin-right: 19px;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: 500 Medium;
+}
+
+.somaValorElementos{
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+    margin-left: 19px;
+    margin-right: 27px;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: 500 Medium;
+}
+
+#esconder{
+    display: none;
+}
+
+
+
