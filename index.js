@@ -212,13 +212,13 @@ function createProductCart (produtoClicado){
  <h3 class="precoprodutosCart">${`R$ ` + produtoClicado.precoProduto}</h3>
  </div>`;
 
- botaoremove = document.createElement ("button")
- botaoremove.classList.add("botaoremovecart")
- botaoremove.id = "botaoRemove1";
- botaoremove.innerText ="Remover Item";
- botaoremove.addEventListener('click', (evt)=> {removeToCart(evt)});
+ imgRemove = document.createElement ("img");
+ imgRemove.setAttribute("src", "img/cesto-de-lixo.png");
+ imgRemove.classList.add("botaoremovecart");
+ imgRemove.id = "botaoRemove1";
+ imgRemove.addEventListener('click', (evt)=> {removeToCart(evt)});
 
- criarProduto.appendChild(botaoremove)
+ criarProduto.appendChild(imgRemove)
 
  pegarCart.appendChild(criarProduto);
  
@@ -246,15 +246,15 @@ function addToCart (id){
   quantidadeTotal.innerText = itensCarrinho;
   
   let valorTotalProdutos = document.querySelector(".valorTotalProdutos");
-  valorTotalProdutos.innerText = totalCarrinho;
+  valorTotalProdutos.innerText = totalCarrinho.toFixed(2);
 
   createProductCart(produtoClicado);
 }
 
 
 function removeToCart(evt){
-  let button = evt.target;
-  let product = button.parentElement;
+  let img = evt.target;
+  let product = img.parentElement;
   let idDoProdutoRemovido = product.id;
   console.log(idDoProdutoRemovido);
   product.remove()
@@ -273,26 +273,3 @@ function removeToCart(evt){
  let valorTotalRemoveCart = document.querySelector(".valorTotalProdutos");
  valorTotalRemoveCart.innerHTML = totalCarrinho -= banco[idDoProdutoRemovido].precoProduto;
 }
-
-/*function createCalculadora (){
-  const captureAside = document.getElementsByClassName("lateral");
-
-  const criaCalcula = document.createElement ("div");
-  criaCalcula.classList = "calculadoraCarr"
-  criaCalcula.id = "calculadoraDisplay"
-
-  criaCalcula.innerHTML = `
-  <div class="quantidadeDeElementos">
-    <h2>Quantidade: </h2>
-    <h3>${itensCarrinho}</h3>
-  </div>
-    <div class="somaValorElementos">
-      <h2>Total: </h2>
-      <h3>${`R$` + totalCarrinho}</h3>
-    </div>`;
-
-captureAside.appendChild(criaCalcula);
- 
-}
-createCalculadora();*/
-
