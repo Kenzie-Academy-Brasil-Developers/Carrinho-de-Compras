@@ -10,12 +10,12 @@
 <body>
     <header>
          <img src="img/nike-99.png" alt="Logotipo Nike" class="logotipo">
-        <nav>
+        <nav class="listaDeFiltros">
           <ul class="filters">
-            <li class="filtrosnav">Todos</li>
-            <li class="filtrosnav">Dunk Low</li>
-            <li class="filtrosnav">Air Jordan</li>
-            <li class="filtrosnav">Slide</li>
+            <li class="filtrosnav" id="filtros0">Todos</li>
+            <li class="filtrosnav" id="filtros1">Dunk Low</li>
+            <li class="filtrosnav" id="filtros2">Air Jordan</li>
+            <li class="filtrosnav" id="filtros3">Slide</li>
           </ul>
        </nav>
     </header>
@@ -24,19 +24,20 @@
               <div class="container"> </div> 
 
              <aside class="lateral">
-                <div>
+                  <div>
                         <form class="search-area">
-                            <input type="text" placeholder="   Digite aqui sua pesquisa" />
+                            <input type="text" class="campoDeBusca" placeholder="  Digite aqui sua pesquisa" />
                             <button type="submit" class="forinput">Pesquisar</button>
                         </form>
-                    </div>  
+                  </div>  
 
-                <div>
+                  <div>
                         <div class="titulocarr">
                             <h2>Carrinho de compras</h2>
                         </div>
-                </div>
-                <div id="carrinho">
+                  </div>
+
+                    <div id="carrinho">
                         <div>
                             <h2 class="titlecarr">Carrinho vazio</h2>
                             <h3 class="h3carrinho">Adcione itens</h3>
@@ -55,9 +56,8 @@
                     </div>
             </aside> 
           </section>     
-       </main>
-
-       
+       </main>     
+       <script src="banco.js"></script>
    <script src="index.js"></script>
 </body>
 </html>
